@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+apply plugin: 'com.novoda.bintray-release'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.zhuang:zcomponent:1.0.0'
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+//推送到Bintray配置
+publish {
+    repoName = 'zhuang'
+    userOrg = "likeadog"
+    groupId = "com.zhuang"
+    artifactId = 'zcomponent-compiler'
+    publishVersion = "1.0.0" //版本号
+    desc = "modularization tool" //描述，选填
+}

@@ -1,0 +1,4 @@
+include ':zcompoment-compiler'
+include ':zcomponent'
+include ':app'
+rootProject.name = "Zcomponent"
